@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        body{
+            margin:0;
+        }
+        header{
+            background-color: rgb(198, 203, 203);
+            text-align:center;
+            font-style: italic;
+            font-size: 30px;
+            padding:30px;
+            position:relative;
+            margin: auto;
+        }
+        .navbar{
+            background-color: rgb(130, 130, 136);
+            overflow:hidden;
+            position:sticky;
+            margin: auto;
+        }
+        .navbar a{
+            float:left;
+            display:block;
+            color:rgb(35, 32, 29);
+            text-align:center;
+            padding: 20px 20px;
+            text-decoration:none;
+        }
+        .navbar a:hover{
+            background-color: rgb(41, 5, 244);
+            color:rgb(235, 12, 12);
+        }
+        #i1{
+            float:right;
+            padding: 20px 20px;
+        }
+        .column{
+            float:left;
+            padding:10px;
+            height: 1000px;
+            margin: auto;
+        }
+        .column.side{
+            width:25%;
+            background-color: rgb(197, 197, 196);
+        }
+        .column.middle{
+            width:50%;
+            background-color: rgb(214, 212, 215);
+        }
+        .row::after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+        @media screen and (max-width: 600px) {
+            .column.side, .column.middle {
+                width: 100%;
+            }
+        }
+        .calc{
+            display:table;
+            margin: 200px;
+        }
+        .calc button{
+            display:table-cell;
+            width:25%;
+            position:relative;
+            height:50px;
+            color: rgb(214, 146, 43);
+        }
+        .ope{
+            color: rgb(9, 10, 10);
+            background-color: rgb(135, 135, 131);
+            width: 50%;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Virtual Calculator
+    </header>
+    <div class="navbar"> 
+        <a href="#">about</a>
+        <a href="#">history</a>
+        <a href="#">help</a>
+        <a href="#" id="i1">login</a>
+    </div>
+    <div class="row">
+        <div class="column side">
+            <p>Select Operand:</p>
+            <select class="ope">
+                <option>Arithmatic Operation</option>
+                <option>Exponential Operation</option>
+            </select>
+        </div>
+        <div class="column middle">
+            <div class="calc">
+            <button class="ac">AC</button>
+            <button class="opt">sqrt</button>
+            <button class="opt">&#37;</button>
+            <button class="opt">&#247;</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="opt">&#215;</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="opt">&#8722;</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="opt">&#43;</button>
+            <button>0</button>
+            <button>.</button>
+            <button>&#9003;</button>
+            <button class="opt">&#61;</button>
+        </div>
+        </div>
+        <div class="column side">
+            <h2>Result</h2>
+            <input type="text" id="res">
+        </div>
+    </div>
+</body>
+</html>
